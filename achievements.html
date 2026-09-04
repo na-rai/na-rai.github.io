@@ -1,0 +1,16 @@
+---
+layout: default
+title: Research & Achievements
+---
+<h1>Research &amp; Achievements</h1>
+<p class="page-intro">Academic work, awards, and research — extended as things come up.</p>
+
+<div class="timeline">
+  {% for item in site.achievements %}
+    <div class="timeline__item">
+      {% if item.date %}<span class="timeline__date">{{ item.date | date: "%B %Y" }}</span>{% endif %}
+      <h2>{{ item.title }}</h2>
+      <div>{{ item.content }}</div>
+    </div>
+  {% endfor %}
+</div>

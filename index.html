@@ -1,0 +1,39 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div class="hero__statement">
+    <h1>Hi, I'm Your Name.<br>
+    <!-- PLACEHOLDER: replace with a real one-sentence statement of what you do/study/care about -->
+    I'm a [year] [field] student who builds/researches/writes [what].</h1>
+    <p class="hero__sub">
+      <!-- PLACEHOLDER: 2-3 sentences of context — background, interests, what you're currently focused on -->
+      A short paragraph about your background and what draws you to your field. Keep it specific and in your own voice.
+    </p>
+    <a href="{{ '/projects/' | relative_url }}" class="pill-link pill-link--primary">See my work</a>
+  </div>
+  <aside class="hero__currently">
+    <h2>Currently</h2>
+    <ul>
+      <!-- PLACEHOLDER: 2-4 short lines on what you're doing right now -->
+      <li>Studying [subject], [semester/year]</li>
+      <li>Working on [current project]</li>
+      <li>Reading about [current interest]</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="home-preview">
+  <h2>Recent projects</h2>
+  <div class="project-list">
+    {% for project in site.projects limit:3 %}
+      <a href="{{ project.url | relative_url }}" class="project-list__item">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.tagline }}</p>
+        {% if project.stack %}<p class="project-list__stack">{{ project.stack | join: ", " }}</p>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+  <a href="{{ '/projects/' | relative_url }}" class="see-all-link">All projects</a>
+</section>
