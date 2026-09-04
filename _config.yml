@@ -1,13 +1,13 @@
-title: "Your Name" # PLACEHOLDER — change to your name
-description: "Portfolio of Your Name — [one line about what you do/study]" # PLACEHOLDER
+title: "Nazifa Anjum" # PLACEHOLDER — change to your name
+description: "Portfolio of Nazifa Anjum — [I study CSE at Islamic University of Technology]" # PLACEHOLDER
 baseurl: ""
-url: "https://your-username.github.io" # PLACEHOLDER — replace your-username
+url: "https://na-rai.github.io" # PLACEHOLDER — replace your-username
 
 # Author / contact info shown across the site
 author:
-  name: "Your Name" # PLACEHOLDER
-  email: "you@example.com" # PLACEHOLDER
-  github: "your-username" # PLACEHOLDER
+  name: "Nazifa Anjum" # PLACEHOLDER
+  email: "nazifaanjum@iut-dhaka.edu" # PLACEHOLDER
+  github: "na-rai" # PLACEHOLDER
   linkedin: "your-linkedin-handle" # PLACEHOLDER
 
 # Collections — this is what makes the site extensible.
