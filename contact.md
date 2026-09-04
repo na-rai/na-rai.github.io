@@ -7,8 +7,7 @@ title: Contact
 
 The best way to reach me is email.
 
-- **Email:** [{{ site.author.email }}](mailto:{{ site.author.email }})
-- **GitHub:** [github.com/{{ site.author.github }}](https://github.com/{{ site.author.github }})
-- **LinkedIn:** [linkedin.com/in/{{ site.author.linkedin }}](https://linkedin.com/in/{{ site.author.linkedin }})
+- **Email:** [nazifaanjum@iut-dhaka.edu](mailto:nazifaanjum@iut-dhaka.edu)
+- **GitHub:** [github.com/na-rai](https://github.com/na-rai)
 
 <!-- PLACEHOLDER: add any other channels — Twitter/X, a CV/resume link, etc. -->
