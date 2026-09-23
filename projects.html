@@ -1,0 +1,23 @@
+---
+layout: default
+title: Projects
+---
+<h1 data-reveal>Projects</h1>
+<p class="page-intro" data-reveal>A running record of what I've built — updated as I go.</p>
+
+<div class="project-list project-list--full" data-reveal-group>
+  {% for project in site.projects %}
+    <a href="{{ project.url | relative_url }}" class="project-list__item" data-reveal>
+      <div class="project-list__item-header">
+        <h2>{{ project.title }}</h2>
+        {% if project.date %}<span class="project-list__date">{{ project.date | date: "%Y" }}</span>{% endif %}
+      </div>
+      <p>{{ project.tagline }}</p>
+      {% if project.stack %}
+      <div class="tag-row">
+        {% for tech in project.stack %}<span class="tag">{{ tech }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>

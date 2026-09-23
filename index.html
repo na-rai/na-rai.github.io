@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <svg class="hero__decoration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="100" cy="100" r="70" fill="none" stroke="#C77D3B" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="130" cy="70" r="35" fill="none" stroke="#1B2A4A" stroke-width="1.2" opacity="0.35"/>
+    <path d="M40 150 Q100 100 160 150" fill="none" stroke="#8FA998" stroke-width="1.5" opacity="0.6"/>
+  </svg>
+  <div class="hero__statement" data-reveal>
+    <h1>Hi, I'm Your Name.<br>
+    <!-- PLACEHOLDER: replace with a real one-sentence statement of what you do/study/care about -->
+    I'm a [year] [field] student who builds/researches/writes [what].</h1>
+    <p class="hero__sub">
+      <!-- PLACEHOLDER: 2-3 sentences of context — background, interests, what you're currently focused on -->
+      A short paragraph about your background and what draws you to your field. Keep it specific and in your own voice.
+    </p>
+    <a href="{{ '/projects/' | relative_url }}" class="pill-link pill-link--primary">See my work</a>
+  </div>
+  <aside class="hero__currently" data-reveal>
+    <h2>Currently</h2>
+    <ul>
+      <!-- PLACEHOLDER: 2-4 short lines on what you're doing right now -->
+      <li>Studying [subject], [semester/year]</li>
+      <li>Working on [current project]</li>
+      <li>Reading about [current interest]</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="home-preview">
+  <h2 data-reveal>Recent projects</h2>
+  <div class="project-list" data-reveal-group>
+    {% for project in site.projects limit:3 %}
+      <a href="{{ project.url | relative_url }}" class="project-list__item" data-reveal>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.tagline }}</p>
+        {% if project.stack %}
+        <div class="tag-row">
+          {% for tech in project.stack %}<span class="tag">{{ tech }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+  <a href="{{ '/projects/' | relative_url }}" class="see-all-link">All projects</a>
+</section>
