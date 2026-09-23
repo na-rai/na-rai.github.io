@@ -1,0 +1,96 @@
+// ==== FANCY ADD-ONS — append this to the end of _sass/_custom.scss ====
+
+// Custom text selection
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+// Tag pills (used for tech stack instead of comma-separated text)
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(27,42,74,0.06);
+  color: var(--ink);
+  border: 1px solid rgba(27,42,74,0.12);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-list__item:hover .tag,
+.project-detail .tag {
+  background: rgba(199,125,59,0.12);
+  border-color: rgba(199,125,59,0.3);
+  color: var(--accent);
+}
+
+// Decorative squiggle divider
+.divider-flourish {
+  width: 100%;
+  height: 24px;
+  margin: 2.5rem 0;
+  opacity: 0.5;
+}
+
+// Hero decorative SVG
+.hero__decoration {
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  z-index: -1;
+  opacity: 0.9;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+// Glass-ish panel variant (used on "currently" panel for extra polish)
+.hero__currently {
+  backdrop-filter: blur(2px);
+}
+
+// Scroll-reveal: elements start hidden, JS adds .is-visible when scrolled into view
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+// Stagger children slightly when a group reveals together
+[data-reveal-group] > * {
+  transition-delay: calc(var(--reveal-index, 0) * 60ms);
+}
+
+// Custom scrollbar (Webkit browsers)
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
