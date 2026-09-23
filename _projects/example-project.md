@@ -1,6 +1,6 @@
 ---
-title: "Example Project" # PLACEHOLDER — replace or delete this file
-tagline: "One sentence on what it is and what it does."
+title: "Avian: The silent Groove" # PLACEHOLDER — replace or delete this file
+tagline: "A top-down 2D conservation adventure built with Phaser.js (frontend) and Spring Boot (backend)"
 date: 2026-03-01
 stack: ["java", "Springboot 4", "Vite", "Phaser.js"]
 repo: "https://github.com/na-rai/bird-adventure"
